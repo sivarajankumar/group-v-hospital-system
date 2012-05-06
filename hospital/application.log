@@ -1,0 +1,363 @@
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Staff
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Surgeon
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: SurgicalTechnologist
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: TechnicalStuff
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Technician
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Ward
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: AdministrativeStaff
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Department
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Doctor
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: History
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Hospital
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Nurse
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: OperationStaff
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Patient
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Person
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Receptionist
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Staff
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Surgeon
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: SurgicalTechnologist
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: TechnicalStuff
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Technician
+INFO main java.sql.DatabaseMetaData - HHH000262: Table not found: Ward
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1bed348: startup date [Sat May 05 23:27:19 CAT 2012]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [F:\hospital\build\web\WEB-INF\classes\com\cput\hospital\app\conf\applicationContext-connection.xml]
+INFO main org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [database.properties]
+INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1ef534e: defining beans [dao,personCrudService,hospitalCrudService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,contextApplicationContextProvider,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor#0,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+INFO main org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'hospitalPU'
+INFO main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+INFO main org.hibernate.Version - HHH000412: Hibernate Core {4.0.0.Final}
+INFO main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+INFO main org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+INFO main org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: hospitalPU
+	...]
+INFO main org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+INFO main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+WARN main org.hibernate.dialect.DerbyDialect - HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+INFO main org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+INFO main org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.ADMINISTRATIVESTAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559140]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.DEPARTMENT
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559640]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.DOCTOR
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, location, special]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559670]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.HISTORY
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, prevappo, hdate, diagnosis]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559700]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.HOSPITAL
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, phonenumber, postaladdress, cellnumber, name, homeaddress]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559730]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.NURSE
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559750]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.OPERATIONSTAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, staffnumber]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559790]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.PATIENT
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, patientid, accepted, prescription, sickness_id, specialreqs, allergies]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk340c82e5f3287875]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559840, sql120505220600350]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.PERSON
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, phonenumber, title, postaladdress, hospital_id, cellnumber, gender, lasname, dateofbirth, firstname, race, homeaddress]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk8e4887755f0bec1e]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600570, sql120505220559870]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.RECEPTIONIST
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559900]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.STAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, langauges, certification, joineddate, education, staffnum]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559930]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.SURGEON
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559950]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.SURGICALTECHNOLOGIST
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600000]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.TECHNICALSTUFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600210]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.TECHNICIAN
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600250]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.WARD
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, patientid, wardid]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600290]
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15d63da: startup date [Sat May 05 23:32:14 CAT 2012]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [F:\hospital\build\web\WEB-INF\classes\com\cput\hospital\app\conf\applicationContext-connection.xml]
+INFO main org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [database.properties]
+INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@bd6f9e: defining beans [dao,personCrudService,hospitalCrudService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,contextApplicationContextProvider,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor#0,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+INFO main org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'hospitalPU'
+INFO main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+INFO main org.hibernate.Version - HHH000412: Hibernate Core {4.0.0.Final}
+INFO main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+INFO main org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+INFO main org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: hospitalPU
+	...]
+INFO main org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+INFO main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+WARN main org.hibernate.dialect.DerbyDialect - HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+INFO main org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+INFO main org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.ADMINISTRATIVESTAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559140]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.DEPARTMENT
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, hispital_id, deptcode, deptname]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fka9601f72a5534564]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559640, sql120505232732530]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.DOCTOR
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, location, special]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559670]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.HISTORY
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, prevappo, hdate, diagnosis]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559700]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.HOSPITAL
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, phonenumber, postaladdress, cellnumber, name, code, homeaddress]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559730]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.NURSE
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559750]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.OPERATIONSTAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, staffnumber]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559790]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.PATIENT
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, patientid, accepted, prescription, sickness_id, specialreqs, allergies]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk340c82e5f3287875]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559840, sql120505220600350]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.PERSON
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, phonenumber, title, postaladdress, hospital_id, cellnumber, gender, lasname, dateofbirth, firstname, race, homeaddress]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk8e4887755f0bec1e]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600570, sql120505220559870]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.RECEPTIONIST
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559900]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.STAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, langauges, certification, joineddate, education, staffnum]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559930]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.SURGEON
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559950]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.SURGICALTECHNOLOGIST
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600000]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.TECHNICALSTUFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600210]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.TECHNICIAN
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600250]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.WARD
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, patientid, wardid]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600290]
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@122e15b: startup date [Sun May 06 13:20:37 CAT 2012]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [F:\hospital\build\web\WEB-INF\classes\com\cput\hospital\app\conf\applicationContext-connection.xml]
+INFO main org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [database.properties]
+INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@9d026d: defining beans [dao,personCrudService,hospitalCrudService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,contextApplicationContextProvider,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor#0,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+INFO main org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'hospitalPU'
+INFO main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+INFO main org.hibernate.Version - HHH000412: Hibernate Core {4.0.0.Final}
+INFO main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+INFO main org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+INFO main org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: hospitalPU
+	...]
+INFO main org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+INFO main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+WARN main org.hibernate.dialect.DerbyDialect - HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+INFO main org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+INFO main org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.ADMINISTRATIVESTAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559140]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.DEPARTMENT
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, hispital_id, deptcode, deptname]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fka9601f72a5534564]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559640, sql120505232732530]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.DOCTOR
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, location, special]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559670]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.HISTORY
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, prevappo, hdate, diagnosis]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559700]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.HOSPITAL
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, phonenumber, postaladdress, cellnumber, name, code, homeaddress]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559730]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.NURSE
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559750]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.OPERATIONSTAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, staffnumber]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559790]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.PATIENT
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, patientid, accepted, prescription, sickness_id, specialreqs, allergies]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk340c82e5f3287875]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559840, sql120505220600350]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.PERSON
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, phonenumber, title, postaladdress, hospital_id, cellnumber, gender, lasname, dateofbirth, firstname, race, homeaddress]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk8e4887755f0bec1e]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600570, sql120505220559870]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.RECEPTIONIST
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559900]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.STAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, langauges, certification, joineddate, education, staffnum]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559930]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.SURGEON
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559950]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.SURGICALTECHNOLOGIST
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600000]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.TECHNICALSTUFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600210]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.TECHNICIAN
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600250]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.WARD
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, patientid, wardid]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600290]
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10564f7: startup date [Sun May 06 13:23:47 CAT 2012]; root of context hierarchy
+INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [F:\hospital\build\web\WEB-INF\classes\com\cput\hospital\app\conf\applicationContext-connection.xml]
+INFO main org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [database.properties]
+INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@169680: defining beans [dao,personCrudService,hospitalCrudService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,contextApplicationContextProvider,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor#0,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,entityManagerFactory,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+INFO main org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'hospitalPU'
+INFO main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+INFO main org.hibernate.Version - HHH000412: Hibernate Core {4.0.0.Final}
+INFO main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+INFO main org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+INFO main org.hibernate.ejb.Ejb3Configuration - HHH000204: Processing PersistenceUnitInfo [
+	name: hospitalPU
+	...]
+INFO main org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+INFO main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+WARN main org.hibernate.dialect.DerbyDialect - HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+INFO main org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+INFO main org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.ADMINISTRATIVESTAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559140]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.DEPARTMENT
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, hispital_id, deptcode, deptname]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fka9601f72a5534564]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559640, sql120505232732530]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.DOCTOR
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, location, special]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559670]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.HISTORY
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, prevappo, hdate, diagnosis]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559700]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.HOSPITAL
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, phonenumber, postaladdress, cellnumber, name, code, homeaddress]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559730]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.NURSE
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559750]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.OPERATIONSTAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, staffnumber]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559790]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.PATIENT
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, patientid, accepted, prescription, sickness_id, specialreqs, allergies]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk340c82e5f3287875]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559840, sql120505220600350]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.PERSON
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, phonenumber, title, postaladdress, hospital_id, cellnumber, gender, lasname, dateofbirth, firstname, race, homeaddress]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: [fk8e4887755f0bec1e]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600570, sql120505220559870]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.RECEPTIONIST
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559900]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.STAFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, langauges, certification, joineddate, education, staffnum]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559930]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.SURGEON
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220559950]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.SURGICALTECHNOLOGIST
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600000]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.TECHNICALSTUFF
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600210]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.TECHNICIAN
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [jobdesc, id]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600250]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: .ADMIN.WARD
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [id, patientid, wardid]
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+INFO main org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sql120505220600290]
+INFO main org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
