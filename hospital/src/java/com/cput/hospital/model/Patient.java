@@ -5,17 +5,14 @@
 package com.cput.hospital.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
+import java.util.List;
+import javax.persistence.*;
 
 /**
  *
- * @author Leo
+ * @author yandiswa
  */
 @Entity
 public class Patient implements Serializable {
@@ -23,14 +20,41 @@ public class Patient implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Temporal(javax.persistence.TemporalType.DATE)
+ @Temporal(javax.persistence.TemporalType.DATE)
     private Date accepted;
-    private Long patientID;
-    @OneToOne
-    private History sickness;
+   
+    @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
+    @JoinColumn(name="patient_id")
+    private List<Person> person = new ArrayList<Person>();
+    
+   @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
+    @JoinColumn(name="patient_id")
+    private List<Appointment> appointment = new ArrayList<Appointment>();
+    
+      @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
+    @JoinColumn(name="patient_id")
+    private List<History> history = new ArrayList<History>();
+
+    @ManyToOne
+    private Ward ward;
+    @ManyToOne
+    private OperationStaff operationStaff;
+    
     private String prescription;
     private String allergies;
     private String specialReqs;
+    private String idNumber;
+
+    public String getIdNumber() {
+        return idNumber;
+    }
+
+    public void setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
+    }
+    public Long getId() {
+        return id;
+    }
 
     public Date getAccepted() {
         return accepted;
@@ -48,12 +72,36 @@ public class Patient implements Serializable {
         this.allergies = allergies;
     }
 
-    public Long getPatientID() {
-        return patientID;
+    public List<Appointment> getAppointment() {
+        return appointment;
     }
 
-    public void setPatientID(Long patientID) {
-        this.patientID = patientID;
+    public void setAppointment(List<Appointment> appointment) {
+        this.appointment = appointment;
+    }
+
+    public List<History> getHistory() {
+        return history;
+    }
+
+    public void setHistory(List<History> history) {
+        this.history = history;
+    }
+
+    public OperationStaff getOperationStaff() {
+        return operationStaff;
+    }
+
+    public void setOperationStaff(OperationStaff operationStaff) {
+        this.operationStaff = operationStaff;
+    }
+
+    public List<Person> getPerson() {
+        return person;
+    }
+
+    public void setPerson(List<Person> person) {
+        this.person = person;
     }
 
     public String getPrescription() {
@@ -64,14 +112,6 @@ public class Patient implements Serializable {
         this.prescription = prescription;
     }
 
-    public History getSickness() {
-        return sickness;
-    }
-
-    public void setSickness(History sickness) {
-        this.sickness = sickness;
-    }
-
     public String getSpecialReqs() {
         return specialReqs;
     }
@@ -79,9 +119,13 @@ public class Patient implements Serializable {
     public void setSpecialReqs(String specialReqs) {
         this.specialReqs = specialReqs;
     }
-    
-    public Long getId() {
-        return id;
+
+    public Ward getWard() {
+        return ward;
+    }
+
+    public void setWard(Ward ward) {
+        this.ward = ward;
     }
 
     public void setId(Long id) {
@@ -110,7 +154,7 @@ public class Patient implements Serializable {
 
     @Override
     public String toString() {
-        return "org.za.hospital.model.Patient[ id=" + id + " ]";
+        return "com.cput.hospital.model.Patient[ id=" + id + " ]";
     }
     
 }

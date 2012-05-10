@@ -16,7 +16,6 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -70,5 +69,25 @@ public class PersonJUnitTest {
      personCrudService.persist(person);
      personId =person.getId();
      Assert.assertNotNull(person.getId());
+          
+     Person person1 = personCrudService.findById(personId);
+ 
+     Assert.assertEquals("Mr", person1.getTitle());
+     //update
+      Person person2 = personCrudService.findById(personId);
+     person2.setTitle("Miss");
+      personCrudService.merge(person2);
+         
+         Person person3 = personCrudService.findById(personId);
+          Assert.assertEquals("Miss", person3.getTitle());
+          //delete
+       /*  Person person4 = personCrudService.findById(personId);
+     personCrudService.remove(person4);
+        Person person5 = personCrudService.findById(personId);
+        Assert.assertNull(person5);*/
+   
+         personCrudService.removeById(new Long(65));
+         Person person65 = personCrudService.findById(new Long(65));
+         Assert.assertNull(person65);
      }
 }
