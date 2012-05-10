@@ -5,6 +5,7 @@
 package com.cput.hospital.app.factory;
 
 import com.cput.hospital.model.*;
+import java.sql.Time;
 import java.util.Date;
 import java.util.Map;
 
@@ -35,10 +36,10 @@ public class Appfactory {
         Address address = new Address();
         address.setPostalAddress(values.get("postal address"));
         address.setHomeAddress(values.get("home address"));
-person.setAddress(address);
-person.setContact(cont);
-person.setDemographic(demo);
-person.setName(name);
+        person.setAddress(address);
+        person.setContact(cont);
+        person.setDemographic(demo);
+        person.setName(name);
     return person;
     }
 
@@ -52,4 +53,28 @@ person.setName(name);
          hospital.getDepartment().add(department);
          return hospital;
     }
-}
+    public static Patient creatPatient(Map<String, String> values) {
+        Patient patient = new Patient();
+        patient.setAccepted((new Date()));
+        patient.setAllergies(values.get("allergies"));
+        patient.setPrescription(values.get("prestription"));
+        patient.setSpecialReqs(values.get("spacial_req"));
+        patient.setIdNumber(values.get("idNumber"));
+        Person person = new Person();
+        //history
+        History history = new History();
+        history.setDiagnosis(values.get("diagnoses"));
+        history.setHdate(new Date());
+        history.setPrevAppo(values.get("privAppointment"));
+       Appointment appointment = new Appointment();
+       appointment.setDate(new Date());
+       appointment.setTime(new Time(12,45,10));
+       patient.getAppointment().add(appointment);
+       patient.getHistory().add(history);
+        patient.getPerson().add(person);
+        
+        return patient;
+    }
+    }
+    
+

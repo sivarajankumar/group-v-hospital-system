@@ -24,6 +24,17 @@ public class Ward implements Serializable {
 
     private String wardId;
     private Long patientId;
+    private String wardStatus;
+
+    public String getWardStatus() {
+        return wardStatus;
+    }
+
+    public void setWardStatus(String wardStatus) {
+        this.wardStatus = wardStatus;
+    }
+   
+    
    
     public Long getPatientId() {
         return patientId;
