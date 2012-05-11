@@ -5,10 +5,9 @@
 package com.cput.hospital.model;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.*;
 
 /**
  *
@@ -23,6 +22,27 @@ public class OperationStaff implements Serializable {
 
     private String staffNumber;
 
+    @OneToMany
+    private List<Doctor> doctor = new ArrayList<Doctor>();
+    @OneToMany
+    private List<Nurse> nurse =new ArrayList<Nurse>();
+
+    public List<Doctor> getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(List<Doctor> doctor) {
+        this.doctor = doctor;
+    }
+
+    public List<Nurse> getNurse() {
+        return nurse;
+    }
+
+    public void setNurse(List<Nurse> nurse) {
+        this.nurse = nurse;
+    }
+    
     public String getStaffNumber() {
         return staffNumber;
     }

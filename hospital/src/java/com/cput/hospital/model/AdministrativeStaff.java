@@ -16,20 +16,21 @@ import javax.persistence.Id;
  */
 @Entity
 public class AdministrativeStaff implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String jobDesc;
+    private String jobDescription;
 
-    public String getJobDesc() {
-        return jobDesc;
+    public String getJobDescription() {
+        return jobDescription;
     }
 
-    public void setJobDesc(String jobDesc) {
-        this.jobDesc = jobDesc;
+    public void setJobDescription(String jobDescription) {
+        this.jobDescription = jobDescription;
     }
-    
+
     public Long getId() {
         return id;
     }
@@ -62,5 +63,4 @@ public class AdministrativeStaff implements Serializable {
     public String toString() {
         return "org.za.hospital.model.AdministrativeStaff[ id=" + id + " ]";
     }
-    
 }

@@ -9,7 +9,6 @@ import java.sql.Time;
 import java.util.Date;
 import java.util.Map;
 
-
 /**
  *
  * @author Leo
@@ -17,13 +16,13 @@ import java.util.Map;
 public class Appfactory {
 
     public static Person createPerson(Map<String, String> values) {
-         Person person = new Person();
+        Person person = new Person();
         person.setTitle(values.get("title"));
 
         Name name = new Name();
         name.setFirstName(values.get("firstname"));
         name.setLasName(values.get("lastname"));
-       
+
         Demographic demo = new Demographic();
         demo.setDateOfBirth(new Date());
         demo.setRace(values.get("race"));
@@ -36,22 +35,43 @@ public class Appfactory {
         Address address = new Address();
         address.setPostalAddress(values.get("postal address"));
         address.setHomeAddress(values.get("home address"));
+
         person.setAddress(address);
         person.setContact(cont);
         person.setDemographic(demo);
         person.setName(name);
-    return person;
+        return person;
+
+      
     }
 
     public static Hospital creatHospital(Map<String, String> values) {
-         Hospital hospital = new Hospital();
-         hospital.setName(values.get("name"));
-         hospital.setCode(values.get("code"));
-         Department department = new Department();
-         department.setDeptCode(values.get("deptCode"));
-         department.setDeptName(values.get("deptName"));
-         hospital.getDepartment().add(department);
-         return hospital;
+        Hospital hospital = new Hospital();
+        hospital.setName(values.get("name"));
+        hospital.setCode(values.get("code"));
+        Department department = new Department();
+        department.setDeptCode(values.get("deptCode"));
+        department.setDeptName(values.get("deptName"));
+        hospital.getDepartment().add(department);
+        return hospital;
+    }
+
+    public static Staff createStaff(Map<String, String> values) {
+
+        Staff staff = new Staff();
+        staff.setStaffNum(values.get("Staff number"));
+        staff.setJoinedDate(new Date());
+        staff.setEducation(values.get("Education"));
+        staff.setCertification(values.get("Certification"));
+        staff.setLangauges(values.get("Language"));
+
+        AdministrativeStaff admin = new AdministrativeStaff();
+        admin.setJobDescription(values.get("Job description"));
+
+        TechnicalStaff techStaff = new TechnicalStaff();
+        techStaff.setJobDescription(values.get("Job description"));
+        techStaff.setJobDescription("Job description");
+        return staff;
     }
     public static Patient creatPatient(Map<String, String> values) {
         Patient patient = new Patient();

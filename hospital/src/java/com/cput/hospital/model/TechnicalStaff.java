@@ -15,23 +15,24 @@ import javax.persistence.Id;
  * @author Leo
  */
 @Entity
-public class Receptionist implements Serializable {
+public class TechnicalStaff implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String jobDesc;
-
-    public String getJobDesc() {
-        return jobDesc;
-    }
-
-    public void setJobDesc(String jobDesc) {
-        this.jobDesc = jobDesc;
-    }
     
+    private String jobDescription;
+   
     public Long getId() {
         return id;
+    }
+
+    public String getJobDescription() {
+        return jobDescription;
+    }
+
+    public void setJobDescription(String jobDescription) {
+        this.jobDescription = jobDescription;
     }
 
     public void setId(Long id) {
@@ -48,10 +49,10 @@ public class Receptionist implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Receptionist)) {
+        if (!(object instanceof TechnicalStaff)) {
             return false;
         }
-        Receptionist other = (Receptionist) object;
+        TechnicalStaff other = (TechnicalStaff) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -60,7 +61,7 @@ public class Receptionist implements Serializable {
 
     @Override
     public String toString() {
-        return "org.za.hospital.model.Receptionist[ id=" + id + " ]";
+        return "org.za.hospital.model.TechnicalStuff[ id=" + id + " ]";
     }
     
 }

@@ -15,31 +15,35 @@ import javax.persistence.*;
  */
 @Entity
 public class Hospital implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-     private String name;
-     private String code;
+    private String name;
+    private String code;
 
-    public String getCode() {
+   
+    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
+    @JoinColumn(name = "hospital_id")
+    private List<Department> department = new ArrayList<Department>();
+
+     public String getCode() {
         return code;
     }
 
     public void setCode(String code) {
         this.code = code;
-    }
-    
-    @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
-    @JoinColumn(name="hispital_id")
-    private List<Department> department = new ArrayList<Department>();
+        }
     public List<Department> getDepartment() {
         return department;
     }
+
     public void setDepartment(List<Department> department) {
         this.department = department;
-    
+
     }
+
     public String getName() {
         return name;
     }
@@ -47,8 +51,7 @@ public class Hospital implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    
-    
+
     public Long getId() {
         return id;
     }
@@ -81,5 +84,4 @@ public class Hospital implements Serializable {
     public String toString() {
         return "org.za.hospital.model.Hospital[ id=" + id + " ]";
     }
-    
 }
