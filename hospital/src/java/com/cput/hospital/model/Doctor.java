@@ -5,10 +5,9 @@
 package com.cput.hospital.model;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.*;
 
 /**
  *
@@ -23,7 +22,17 @@ public class Doctor implements Serializable {
 
     private String special;
     private String location;
+    @ManyToMany
+    private List<Surgeon> surgeon = new ArrayList<Surgeon>();
 
+    public List<Surgeon> getSurgeon() {
+        return surgeon;
+    }
+
+    public void setSurgeon(List<Surgeon> surgeon) {
+        this.surgeon = surgeon;
+    }
+    
     public String getLocation() {
         return location;
     }

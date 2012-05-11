@@ -57,7 +57,7 @@ public class PersonJUnitTest {
      values.put("title", "Mr");
      values.put("firstname", "Qiqa");
      values.put("lastname", "Kotyi");
-     values.put("gender", "male");
+     values.put("gender", "Male");
      values.put("race","white");
      values.put("date of birth","1985-02-3");
      values.put("cell number", "083569584");

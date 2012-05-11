@@ -7,6 +7,7 @@ package com.cput.test.hospital.repository.Staff;
 import com.cput.hospital.app.factory.Appfactory;
 import com.cput.hospital.model.Staff;
 import com.cput.hospital.services.StaffCrudService;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.*;
@@ -21,6 +22,7 @@ public class StaffTest {
 
     private StaffCrudService staffCrudService;
     private static ApplicationContext ctx;
+    private static Long id;
 
     public StaffTest() {
     }
@@ -47,7 +49,7 @@ public class StaffTest {
 
     @Test
     public void testStaff() {
-
+        //create 
         staffCrudService = (StaffCrudService) ctx.getBean("staffCrudService");
 
         Map<String, String> values = new HashMap<String, String>();
@@ -60,5 +62,28 @@ public class StaffTest {
 
         Staff staff = Appfactory.createStaff(values);
         staffCrudService.persist(staff);
+        id = staff.getId();
+        Assert.assertNotNull(staff);
+
+        // Read
+        staff = staffCrudService.findById(id);
+        Assert.assertNotNull(staff);
+
+        // Update 
+        Staff staff2 = staffCrudService.findById(id);
+        staff2.setStaffNum("123456");
+        staff2.setJoinedDate(new Date());
+        staff2.setEducation("Diploma");
+        staff2.setCertification("ND: HR Mangement");
+        staff2.setLangauges("Sepedi");
+        staffCrudService.merge(staff2);
+
+        // Delete 
+        Staff staff3 = staffCrudService.findById(id);
+        staffCrudService.remove(staff3);
+        
+        //Read again
+        Staff staff4 = staffCrudService.findById(id);
+        Assert.assertNull(staff4);
     }
 }

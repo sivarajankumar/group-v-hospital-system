@@ -6,13 +6,10 @@ package com.cput.test.hospital.repository.patient;
 
 import com.cput.hospital.app.factory.Appfactory;
 import com.cput.hospital.model.Patient;
-
-import com.cput.hospital.services.HospitalCrudService;
 import com.cput.hospital.services.PatientCrudService;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.*;
-import static org.junit.Assert.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -5,12 +5,10 @@
 package com.cput.hospital.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
+import java.util.List;
+import javax.persistence.*;
 
 /**
  *
@@ -29,6 +27,26 @@ public class Staff implements Serializable {
     private String education;
     private String certification;
     private String langauges;
+    @OneToMany(orphanRemoval= true,cascade=CascadeType.ALL)
+    private List<AdministrativeStaff> admin = new ArrayList<AdministrativeStaff>();
+    @OneToMany
+    private List<TechnicalStaff> techStaff = new ArrayList<TechnicalStaff>();
+
+    public List<AdministrativeStaff> getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(List<AdministrativeStaff> admin) {
+        this.admin = admin;
+    }
+
+    public List<TechnicalStaff> getTechStaff() {
+        return techStaff;
+    }
+
+    public void setTechStaff(List<TechnicalStaff> techStaff) {
+        this.techStaff = techStaff;
+    }
 
     public String getCertification() {
         return certification;

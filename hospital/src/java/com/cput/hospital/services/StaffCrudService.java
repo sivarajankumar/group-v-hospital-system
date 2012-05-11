@@ -4,12 +4,12 @@
  */
 package com.cput.hospital.services;
 
-import com.cput.hospital.model.Hospital;
+import com.cput.hospital.model.Staff;
 
 /**
  *
- * @author user
+ * @author Leo
  */
-public interface HospitalCrudService extends Service<Hospital,Long>{
+public interface StaffCrudService extends Service<Staff,Long>{
     
 }
