@@ -21,7 +21,17 @@ public class Surgeon implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
+    private String speciality;
+    
     private String jobDesc;
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
 
     public String getJobDesc() {
         return jobDesc;

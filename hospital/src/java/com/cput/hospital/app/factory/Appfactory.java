@@ -71,6 +71,12 @@ public class Appfactory {
         TechnicalStaff techStaff = new TechnicalStaff();
         techStaff.setJobDescription(values.get("Job description"));
         techStaff.setJobDescription("Job description");
+        
+        Surgeon surgeon  = new Surgeon();
+        surgeon.setSpeciality(values.get("Speciality"));
+        surgeon.setSpeciality(values.get("Speciality"));
+        surgeon.setSpeciality(values.get("Speciality"));
+        
         return staff;
     }
     public static Patient creatPatient(Map<String, String> values) {

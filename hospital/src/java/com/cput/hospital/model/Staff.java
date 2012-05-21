@@ -31,11 +31,21 @@ public class Staff implements Serializable {
     private List<AdministrativeStaff> admin = new ArrayList<AdministrativeStaff>();
     @OneToMany
     private List<TechnicalStaff> techStaff = new ArrayList<TechnicalStaff>();
-
+    
     public List<AdministrativeStaff> getAdmin() {
         return admin;
     }
+    @OneToMany(orphanRemoval= true,cascade=CascadeType.ALL)
+    private List<OperationStaff> opStaff;
 
+    public List<OperationStaff> getOpStaff() {
+        return opStaff;
+    }
+
+    public void setOpStaff(List<OperationStaff> opStaff) {
+        this.opStaff = opStaff;
+    }
+    
     public void setAdmin(List<AdministrativeStaff> admin) {
         this.admin = admin;
     }

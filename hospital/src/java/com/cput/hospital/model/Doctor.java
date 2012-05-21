@@ -19,11 +19,19 @@ public class Doctor implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    private String special;
+    
+    private boolean availability;
     private String location;
     @ManyToMany
     private List<Surgeon> surgeon = new ArrayList<Surgeon>();
+
+    public boolean isAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(boolean availability) {
+        this.availability = availability;
+    }
 
     public List<Surgeon> getSurgeon() {
         return surgeon;
@@ -41,13 +49,6 @@ public class Doctor implements Serializable {
         this.location = location;
     }
 
-    public String getSpecial() {
-        return special;
-    }
-
-    public void setSpecial(String special) {
-        this.special = special;
-    }
     
     public Long getId() {
         return id;
