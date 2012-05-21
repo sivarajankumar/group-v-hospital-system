@@ -79,9 +79,10 @@ public class StaffTest {
         staffCrudService.merge(staff2);
 
         // Delete 
-        Staff staff3 = staffCrudService.findById(id);
-        staffCrudService.remove(staff3);
         
+          Staff staff3 = staffCrudService.findById(id);
+          staffCrudService.remove(staff3);
+         
         //Read again
         Staff staff4 = staffCrudService.findById(id);
         Assert.assertNull(staff4);
