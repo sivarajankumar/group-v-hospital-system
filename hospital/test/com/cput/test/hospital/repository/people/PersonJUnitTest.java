@@ -86,8 +86,8 @@ public class PersonJUnitTest {
         Person person5 = personCrudService.findById(personId);
         Assert.assertNull(person5);*/
    
-         personCrudService.removeById(new Long(65));
-         Person person65 = personCrudService.findById(new Long(65));
-         Assert.assertNull(person65);
+        // personCrudService.removeById(new Long(65));
+        // Person person65 = personCrudService.findById(new Long(65));
+        // Assert.assertNull(person65);
      }
 }
