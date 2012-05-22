@@ -2,11 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cput.hospital.services.Impl;
+package com.cput.hospital.app.Modules.TechnicalStaff.Impl;
 
 import com.cput.hospital.model.TechnicalStaff;
 import com.cput.hospital.repository.GenericDAO;
-import com.cput.hospital.services.TechnicalStaffCrudService;
+import com.cput.hospital.app.Modules.TechnicalStaff.TechnicalStaffCrudService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

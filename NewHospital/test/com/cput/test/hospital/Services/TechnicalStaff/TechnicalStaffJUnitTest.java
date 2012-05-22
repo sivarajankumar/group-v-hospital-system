@@ -6,7 +6,7 @@ package com.cput.test.hospital.Services.TechnicalStaff;
 
 import com.cput.hospital.app.factory.Appfactory;
 import com.cput.hospital.model.TechnicalStaff;
-import com.cput.hospital.services.TechnicalStaffCrudService;
+import com.cput.hospital.app.Modules.TechnicalStaff.TechnicalStaffCrudService;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.*;
