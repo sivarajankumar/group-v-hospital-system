@@ -42,7 +42,7 @@ public class Appfactory {
         person.setName(name);
         return person;
 
-      
+
     }
 
     public static Hospital creatHospital(Map<String, String> values) {
@@ -68,17 +68,14 @@ public class Appfactory {
         AdministrativeStaff admin = new AdministrativeStaff();
         admin.setJobDescription(values.get("Job description"));
 
-        TechnicalStaff techStaff = new TechnicalStaff();
-        techStaff.setJobDescription(values.get("Job description"));
-        techStaff.setJobDescription("Job description");
-        
-        Surgeon surgeon  = new Surgeon();
+        Surgeon surgeon = new Surgeon();
         surgeon.setSpeciality(values.get("Speciality"));
         surgeon.setSpeciality(values.get("Speciality"));
         surgeon.setSpeciality(values.get("Speciality"));
-        
+
         return staff;
     }
+
     public static Patient creatPatient(Map<String, String> values) {
         Patient patient = new Patient();
         patient.setAccepted((new Date()));
@@ -92,15 +89,20 @@ public class Appfactory {
         history.setDiagnosis(values.get("diagnoses"));
         history.setHdate(new Date());
         history.setPrevAppo(values.get("privAppointment"));
-       Appointment appointment = new Appointment();
-       appointment.setDate(new Date());
-       appointment.setTime(new Time(12,45,10));
-       patient.getAppointment().add(appointment);
-       patient.getHistory().add(history);
+        Appointment appointment = new Appointment();
+        appointment.setDate(new Date());
+        appointment.setTime(new Time(12, 45, 10));
+        patient.getAppointment().add(appointment);
+        patient.getHistory().add(history);
         patient.getPerson().add(person);
-        
+
         return patient;
     }
-    }
-    
 
+    public static TechnicalStaff createTechnicalStaff(Map<String, String> values) {
+        TechnicalStaff technicalStaff = new TechnicalStaff();
+        technicalStaff.setJobDescription(values.get("Job description"));
+        technicalStaff.setJobDescription("Job description");
+        return technicalStaff;
+    }
+}
