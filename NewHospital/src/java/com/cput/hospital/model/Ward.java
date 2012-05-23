@@ -22,9 +22,17 @@ public class Ward implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String wardId;
-    private Long patientId;
-    private String wardStatus;
+    private String wardcode;
+    private String  wardStatus;
+    private String gender;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public String getWardStatus() {
         return wardStatus;
@@ -33,24 +41,18 @@ public class Ward implements Serializable {
     public void setWardStatus(String wardStatus) {
         this.wardStatus = wardStatus;
     }
+
+    public String getWardcode() {
+        return wardcode;
+    }
+
+    public void setWardcode(String wardcode) {
+        this.wardcode = wardcode;
+    }
    
-    
    
-    public Long getPatientId() {
-        return patientId;
-    }
 
-    public void setPatientId(Long patientId) {
-        this.patientId = patientId;
-    }
-
-    public String getWardId() {
-        return wardId;
-    }
-
-    public void setWardId(String wardId) {
-        this.wardId = wardId;
-    }
+   
     
     public Long getId() {
         return id;

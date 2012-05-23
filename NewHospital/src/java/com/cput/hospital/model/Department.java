@@ -5,10 +5,9 @@
 package com.cput.hospital.model;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.*;
 
 /**
  *
@@ -22,6 +21,21 @@ public class Department implements Serializable {
     private Long id;
     private String deptName;
     private String deptCode;
+    @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
+    @JoinColumn(name="dept_id")
+    private List<Ward> wards = new ArrayList<Ward>();
+    
+    public List<Ward> getWard() {
+        return wards;
+    }
+        public List<Ward> getWards() {
+        return wards;
+    }
+
+    public void setWards(List<Ward> wards) {
+        this.wards = wards;
+    }
+   
 
     public String getDeptCode() {
         return deptCode;

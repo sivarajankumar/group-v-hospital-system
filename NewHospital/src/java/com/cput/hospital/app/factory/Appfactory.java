@@ -49,10 +49,65 @@ public class Appfactory {
         Hospital hospital = new Hospital();
         hospital.setName(values.get("name"));
         hospital.setCode(values.get("code"));
+        
         Department department = new Department();
-        department.setDeptCode(values.get("deptCode"));
-        department.setDeptName(values.get("deptName"));
+        department.setDeptName(values.get("dept1"));
+        department.setDeptCode(values.get("dept11"));
+
+        Department department2 = new Department();
+        department2.setDeptName(values.get("dept2"));
+        department2.setDeptCode(values.get("dept22"));
+        
+        Department department3 = new Department();
+        department3.setDeptName(values.get("dept3"));
+        department3.setDeptCode(values.get("dept33"));
+        
+         Ward females = new Ward();
+         females.setWardcode(values.get("code1"));
+         females.setWardStatus(values.get("status1"));
+         females.setGender(values.get("gender1"));
+         
+         Ward males = new Ward();
+         males.setWardcode(values.get("code2"));
+         males.setWardStatus(values.get("status2"));
+         males.setGender(values.get("gender2"));
+         
+         
+         Ward males1 = new Ward();
+         males1.setWardcode(values.get("code2"));
+         males1.setWardStatus(values.get("status2"));
+         males1.setGender(values.get("gender2"));
+         
+         
+         Ward females1 = new Ward();
+         females1.setWardcode(values.get("code1"));
+         females1.setWardStatus(values.get("status1"));
+         females1.setGender(values.get("gender1"));
+         
+         
+         Ward males3 = new Ward();
+         males3.setWardcode(values.get("code2"));
+         males3.setWardStatus(values.get("status2"));
+         males3.setGender(values.get("gender2"));
+         
+         
+         Ward females3 = new Ward();
+         females3.setWardcode(values.get("code1"));
+         females3.setWardStatus(values.get("status1"));
+         females3.setGender(values.get("gender1"));
+        
+        department.getWard().add(males);
+        department.getWard().add(females);
+        
+        department2.getWard().add(males1);
+        department2.getWard().add(females1);
+        
+       department3.getWard().add(males3);
+       department3.getWard().add(females3);
+       
         hospital.getDepartment().add(department);
+        hospital.getDepartment().add(department2);
+        hospital.getDepartment().add(department3);
         return hospital;
     }
 
