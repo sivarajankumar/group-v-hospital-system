@@ -5,9 +5,19 @@
 package com.cput.test.hospital.repository.patient;
 
 import com.cput.hospital.app.factory.Appfactory;
+import com.cput.hospital.app.module.patient.AddPatientService;
 import com.cput.hospital.model.Patient;
+import com.cput.hospital.model.Person;
+/*<<<<<<< .mine
+import com.cput.hospital.model.Person;
+
+import com.cput.hospital.services.HospitalCrudService;
+=======
+>>>>>>> .r9*/
 import com.cput.hospital.services.PatientCrudService;
+import com.cput.hospital.services.PersonCrudService;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.junit.*;
 import org.springframework.context.ApplicationContext;
@@ -20,6 +30,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class PatientJUnitTest {
     private static ApplicationContext ctx;
     private PatientCrudService patientCrudService;
+    private PersonCrudService personCrudService;
     private static Long patientID;
     public PatientJUnitTest() {
     }
@@ -46,6 +57,24 @@ public class PatientJUnitTest {
     //
     @Test
     public void patient() {
+        
+        
+          personCrudService =(PersonCrudService) ctx.getBean("personCrudService"); 
+         
+     Map<String,String> values = new HashMap<String,String>();
+     values.put("title", "Mr");
+     values.put("firstname", "Qiqa");
+     values.put("lastname", "Kotyi");
+     values.put("gender", "male");
+     values.put("race","white");
+     values.put("date of birth","1985-02-3");
+     values.put("cell number", "083569584");
+     values.put("phone number", "021 458 8954");
+     values.put("postal address", "P.O box 99");
+     values.put("home address", "4854 Peter Street");
+     
+     Person person = Appfactory.createPerson(values);
+     personCrudService.persist(person);
           patientCrudService = (PatientCrudService)ctx.getBean("patientCrudService");
          Map<String, String> patienvalues = new HashMap<String, String>();
     
@@ -73,7 +102,16 @@ public class PatientJUnitTest {
     patienvalues.put("privAppointment", "mj");
    
     
-       Patient patient = Appfactory.creatPatient(patienvalues);
+       Patient patient = Appfactory.creatPatient(patienvalues,person);
+      /* AddPatientService object;
+       
+       object = (AddPatientService)ctx.getBean("addPatientService");
+       Person myperson = object.findByName("Qiqa");
+       */
+     
+       
+                  
+       
          patientCrudService.persist(patient);
          patientID = patient.getId();
          Assert.assertNotNull(patient.getId());
@@ -95,13 +133,13 @@ public class PatientJUnitTest {
     
 
          
-          patientCrudService.removeById(new Long(49));
+         /* patientCrudService.removeById(new Long(49));
          Patient patient8 = patientCrudService.findById(new Long(49));
          Assert.assertNull(patient8);
          
           patientCrudService.removeById(new Long(50));
          Patient patient18 = patientCrudService.findById(new Long(50));
-         Assert.assertNull(patient18);
+         Assert.assertNull(patient18);*/
          
     }
 }
