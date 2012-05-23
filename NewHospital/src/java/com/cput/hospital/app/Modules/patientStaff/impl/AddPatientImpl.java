@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cput.hospital.app.Modules.patient.impl;
+package com.cput.hospital.app.Modules.patientStaff.impl;
 
 
-import com.cput.hospital.app.Modules.patient.AddPatientService;
+import com.cput.hospital.app.Modules.patientStaff.service.AddPatientService;
 import com.cput.hospital.model.*;
 import com.cput.hospital.services.PatientCrudService;
 import com.cput.hospital.services.PersonCrudService;
