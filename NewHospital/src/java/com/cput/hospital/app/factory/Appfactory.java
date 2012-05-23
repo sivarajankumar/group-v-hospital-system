@@ -131,33 +131,34 @@ public class Appfactory {
         return staff;
     }
 
-    public static Patient creatPatient(Map<String, String> values) {
+    public static Patient creatPatient(Map<String, String> values,Person person ) {
         Patient patient = new Patient();
         patient.setAccepted((new Date()));
         patient.setAllergies(values.get("allergies"));
         patient.setPrescription(values.get("prestription"));
         patient.setSpecialReqs(values.get("spacial_req"));
         patient.setIdNumber(values.get("idNumber"));
-        Person person = new Person();
+       // Person person = new Person();
         //history
         History history = new History();
         history.setDiagnosis(values.get("diagnoses"));
         history.setHdate(new Date());
         history.setPrevAppo(values.get("privAppointment"));
-        Appointment appointment = new Appointment();
-        appointment.setDate(new Date());
-        appointment.setTime(new Time(12, 45, 10));
-        patient.getAppointment().add(appointment);
-        patient.getHistory().add(history);
+       Appointment appointment = new Appointment();
+       appointment.setDate(new Date());
+       appointment.setTime(new Time(12,45,10));
+       patient.getAppointment().add(appointment);
+       patient.getHistory().add(history);
         patient.getPerson().add(person);
-
+        
         return patient;
     }
-
     public static TechnicalStaff createTechnicalStaff(Map<String, String> values) {
         TechnicalStaff technicalStaff = new TechnicalStaff();
         technicalStaff.setJobDescription(values.get("Job description"));
         technicalStaff.setJobDescription("Job description");
         return technicalStaff;
     }
+
+    
 }
