@@ -93,15 +93,7 @@ public class PatientJUnitTest {
    
     
        Patient patient = Appfactory.creatPatient(patienvalues,person);
-      /* AddPatientService object;
-       
-       object = (AddPatientService)ctx.getBean("addPatientService");
-       Person myperson = object.findByName("Qiqa");
-       */
-     
-       
-                  
-       
+    
          patientCrudService.persist(patient);
          patientID = patient.getId();
          Assert.assertNotNull(patient.getId());

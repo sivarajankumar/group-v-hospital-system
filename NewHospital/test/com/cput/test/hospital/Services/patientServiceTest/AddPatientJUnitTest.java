@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cput.test.hospital.repository.patients;
+package com.cput.test.hospital.Services.patientServiceTest;
 
-import com.cput.hospital.app.Modules.patient.AddPatientService;
+import com.cput.hospital.app.Modules.patientStaff.service.AddPatientService;
 import com.cput.hospital.app.factory.Appfactory;
 
 import com.cput.hospital.model.Patient;
