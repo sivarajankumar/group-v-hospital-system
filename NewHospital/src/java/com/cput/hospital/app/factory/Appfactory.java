@@ -156,7 +156,6 @@ public class Appfactory {
     public static TechnicalStaff createTechnicalStaff(Map<String, String> values) {
         TechnicalStaff technicalStaff = new TechnicalStaff();
         technicalStaff.setJobDescription(values.get("Job description"));
-        technicalStaff.setJobDescription("Job description");
         return technicalStaff;
     }
 

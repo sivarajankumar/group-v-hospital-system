@@ -29,7 +29,7 @@ public class TechnicalStaffJUnitTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        ctx = new ClassPathXmlApplicationContext("com/cput/hospital/app/conf/ApplicationContextProvider-*.xml");
+        ctx = new ClassPathXmlApplicationContext("classpath:com/cput/hospital/app/conf/applicationContext-*.xml");
     }
 
     @AfterClass
@@ -53,11 +53,8 @@ public class TechnicalStaffJUnitTest {
         //create staff
         technicalStaffCrudService = (TechnicalStaffCrudService) ctx.getBean("technicalStaffCrudService");
         Map<String, String> values = new HashMap<String, String>();
-        values.put("Stuff number", "210051825");
-        values.put("Joined date", "31-01-1-2012");
-        values.put("Education", "Btech");
-        values.put("Certification", "Btech");
-        values.put("Languages", "English");
+
+        values.put("Job description","Web_Master");
 
         TechnicalStaff technicalStaff = Appfactory.createTechnicalStaff(values);
         technicalStaffCrudService.persist(technicalStaff);
