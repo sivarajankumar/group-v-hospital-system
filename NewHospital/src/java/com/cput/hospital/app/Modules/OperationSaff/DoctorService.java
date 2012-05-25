@@ -11,8 +11,8 @@ import com.cput.hospital.model.Doctor;
  * @author Leo
  */
 public interface DoctorService {
-    
-    public Doctor findSpeciality(String speciality,Long staffNumber);
-    public String CheckAvailability(String status,Long staffNumber);
-    
+
+    public Doctor findSpeciality(String speciality, Long id);
+
+    public String CheckAvailability(String status, Long id);
 }

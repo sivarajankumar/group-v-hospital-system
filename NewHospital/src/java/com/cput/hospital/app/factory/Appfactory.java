@@ -7,6 +7,7 @@ package com.cput.hospital.app.factory;
 import com.cput.hospital.model.*;
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -49,7 +50,7 @@ public class Appfactory {
         Hospital hospital = new Hospital();
         hospital.setName(values.get("name"));
         hospital.setCode(values.get("code"));
-        
+
         Department department = new Department();
         department.setDeptName(values.get("dept1"));
         department.setDeptCode(values.get("dept11"));
@@ -57,54 +58,54 @@ public class Appfactory {
         Department department2 = new Department();
         department2.setDeptName(values.get("dept2"));
         department2.setDeptCode(values.get("dept22"));
-        
+
         Department department3 = new Department();
         department3.setDeptName(values.get("dept3"));
         department3.setDeptCode(values.get("dept33"));
-        
-         Ward females = new Ward();
-         females.setWardcode(values.get("code1"));
-         females.setWardStatus(values.get("status1"));
-         females.setGender(values.get("gender1"));
-         
-         Ward males = new Ward();
-         males.setWardcode(values.get("code2"));
-         males.setWardStatus(values.get("status2"));
-         males.setGender(values.get("gender2"));
-         
-         
-         Ward males1 = new Ward();
-         males1.setWardcode(values.get("code2"));
-         males1.setWardStatus(values.get("status2"));
-         males1.setGender(values.get("gender2"));
-         
-         
-         Ward females1 = new Ward();
-         females1.setWardcode(values.get("code1"));
-         females1.setWardStatus(values.get("status1"));
-         females1.setGender(values.get("gender1"));
-         
-         
-         Ward males3 = new Ward();
-         males3.setWardcode(values.get("code2"));
-         males3.setWardStatus(values.get("status2"));
-         males3.setGender(values.get("gender2"));
-         
-         
-         Ward females3 = new Ward();
-         females3.setWardcode(values.get("code1"));
-         females3.setWardStatus(values.get("status1"));
-         females3.setGender(values.get("gender1"));
-        
+
+        Ward females = new Ward();
+        females.setWardcode(values.get("code1"));
+        females.setWardStatus(values.get("status1"));
+        females.setGender(values.get("gender1"));
+
+        Ward males = new Ward();
+        males.setWardcode(values.get("code2"));
+        males.setWardStatus(values.get("status2"));
+        males.setGender(values.get("gender2"));
+
+
+        Ward males1 = new Ward();
+        males1.setWardcode(values.get("code2"));
+        males1.setWardStatus(values.get("status2"));
+        males1.setGender(values.get("gender2"));
+
+
+        Ward females1 = new Ward();
+        females1.setWardcode(values.get("code1"));
+        females1.setWardStatus(values.get("status1"));
+        females1.setGender(values.get("gender1"));
+
+
+        Ward males3 = new Ward();
+        males3.setWardcode(values.get("code2"));
+        males3.setWardStatus(values.get("status2"));
+        males3.setGender(values.get("gender2"));
+
+
+        Ward females3 = new Ward();
+        females3.setWardcode(values.get("code1"));
+        females3.setWardStatus(values.get("status1"));
+        females3.setGender(values.get("gender1"));
+
         department.getWard().add(males);
         department.getWard().add(females);
-        
+
         department2.getWard().add(males1);
         department2.getWard().add(females1);
-        
-       department3.getWard().add(males3);
-       department3.getWard().add(females3);
-       
+
+        department3.getWard().add(males3);
+        department3.getWard().add(females3);
+
         hospital.getDepartment().add(department);
         hospital.getDepartment().add(department2);
         hospital.getDepartment().add(department3);
@@ -123,41 +124,58 @@ public class Appfactory {
         AdministrativeStaff admin = new AdministrativeStaff();
         admin.setJobDescription(values.get("Job description"));
 
-        Surgeon surgeon = new Surgeon();
-        surgeon.setSpeciality(values.get("Speciality"));
-        surgeon.setSpeciality(values.get("Speciality"));
-        surgeon.setSpeciality(values.get("Speciality"));
-
+        staff.getAdmin().add(admin);
         return staff;
     }
 
-    public static Patient creatPatient(Map<String, String> values,Person person ) {
+    public static Patient creatPatient(Map<String, String> values, Person person) {
         Patient patient = new Patient();
         patient.setAccepted((new Date()));
         patient.setAllergies(values.get("allergies"));
         patient.setPrescription(values.get("prestription"));
         patient.setSpecialReqs(values.get("spacial_req"));
         patient.setIdNumber(values.get("idNumber"));
-       // Person person = new Person();
+        // Person person = new Person();
         //history
         History history = new History();
         history.setDiagnosis(values.get("diagnoses"));
         history.setHdate(new Date());
         history.setPrevAppo(values.get("privAppointment"));
-       Appointment appointment = new Appointment();
-       appointment.setDate(new Date());
-       appointment.setTime(new Time(12,45,10));
-       patient.getAppointment().add(appointment);
-       patient.getHistory().add(history);
+        Appointment appointment = new Appointment();
+        appointment.setDate(new Date());
+        appointment.setTime(new Time(12, 45, 10));
+        patient.getAppointment().add(appointment);
+        patient.getHistory().add(history);
         patient.getPerson().add(person);
-        
+
         return patient;
     }
+
     public static TechnicalStaff createTechnicalStaff(Map<String, String> values) {
         TechnicalStaff technicalStaff = new TechnicalStaff();
         technicalStaff.setJobDescription(values.get("Job description"));
         return technicalStaff;
     }
 
-    
+    public static Doctor showDoctor(Map<String, String> values) {
+        Doctor doctor = new Doctor();
+
+        doctor.setSpeciality(values.get("Speciality"));
+        doctor.setAvailability(values.get("Availability"));
+
+        return doctor;
+    }
+
+    public static OperationStaff createOperstionStaff(Map<String, String> values) {
+
+        OperationStaff opStaff = new OperationStaff();
+        Doctor doc = new Doctor();
+        doc.setSpeciality(values.get("Speciality"));
+        doc.setAvailability(values.get("Availability"));
+        
+        opStaff.getDoctor().add(doc);
+
+        return opStaff;
+
+    }
 }

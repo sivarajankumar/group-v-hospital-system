@@ -15,22 +15,22 @@ import javax.persistence.*;
  */
 @Entity
 public class Doctor implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    private boolean availability;
-    private String location;
-    @ManyToMany
+    private String availability;
+    private String speciality;
+    @OneToMany
     private List<Surgeon> surgeon = new ArrayList<Surgeon>();
 
-    public boolean isAvailability() {
-        return availability;
+    public String getSpeciality() {
+        return speciality;
     }
 
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
 
     public List<Surgeon> getSurgeon() {
@@ -40,16 +40,15 @@ public class Doctor implements Serializable {
     public void setSurgeon(List<Surgeon> surgeon) {
         this.surgeon = surgeon;
     }
-    
-    public String getLocation() {
-        return location;
+
+    public String getAvailability() {
+        return availability;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -82,5 +81,4 @@ public class Doctor implements Serializable {
     public String toString() {
         return "org.za.hospital.model.Doctor[ id=" + id + " ]";
     }
-    
 }

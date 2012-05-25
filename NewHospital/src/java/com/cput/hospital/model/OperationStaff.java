@@ -22,9 +22,10 @@ public class OperationStaff implements Serializable {
 
     private String staffNumber;
 
-    @OneToMany
+    @OneToMany(orphanRemoval=true,cascade=CascadeType.ALL)
     private List<Doctor> doctor = new ArrayList<Doctor>();
     @OneToMany
+    @JoinColumn(name="staff_id")
     private List<Nurse> nurse =new ArrayList<Nurse>();
 
     public List<Doctor> getDoctor() {
