@@ -6,14 +6,11 @@ package com.cput.test.hospital.Services.DoctorServiceTest;
 
 import com.cput.hospital.app.Modules.OperationSaff.DoctorService;
 import com.cput.hospital.app.factory.Appfactory;
-import com.cput.hospital.model.Doctor;
 import com.cput.hospital.model.OperationStaff;
-import com.cput.hospital.model.Staff;
-import com.cput.hospital.services.StaffCrudService;
+import com.cput.hospital.services.OperationStaffCrudService;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.*;
-import static org.junit.Assert.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -22,12 +19,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author Leo
  */
 public class DoctorServiceTest {
-    
+
     private static ApplicationContext ctx;
     private static Long staffId;
-    private StaffCrudService staffCrudService;
     private DoctorService doctorService;
-    
+    private OperationStaffCrudService operationStaffCrudService;
+
     public DoctorServiceTest() {
     }
 
@@ -39,37 +36,35 @@ public class DoctorServiceTest {
     @AfterClass
     public static void tearDownClass() throws Exception {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-     @Test
-     public void testDoctor() {
-     
-         staffCrudService  = (StaffCrudService) ctx.getBean("staffCrudService");
-         doctorService = (DoctorService) ctx.getBean("doctorService"); 
-         
-         Map<String,String> values  = new HashMap<String,String>();
-         values.put("Speciality", "Dentist");
-         values.put("Speciality", "Physiologist");
-         values.put("Speciality", "Phsychiachrist");
-         
-         Staff staff = Appfactory.createStaff(values);
-         staffCrudService.persist(staff);
-         Assert.assertNotNull(staff);
-         staffId = staff.getId();
-         
-         Doctor dentist = doctorService.findSpeciality("Dentist", staffId);
-         Doctor physiologist = doctorService.findSpeciality("Physiologist", staffId);
-         Doctor phsychiachrist = doctorService.findSpeciality("Phsychiachrist", staffId);
-         
-         OperationStaff opStaff = new OperationStaff();
-     }
+
+    @Test
+    public void testDoctor() {
+
+        operationStaffCrudService = (OperationStaffCrudService) ctx.getBean("operationStaffCrudService");
+        //doctorCrudService = (DoctorCrudService) ctx.getBean("doctorCrudService");
+
+        Map<String, String> values = new HashMap<String, String>();
+        values.put("Speciality", "Physiology");
+        values.put("Availability", "Available");
+        values.put("Speciality", "Dentist");
+        values.put("Availability", "Not Available");
+        values.put("Speciality", "Phsychiatrist");
+        values.put("Availability", "Not Available");
+        values.put("Speciality", "Podiatrist");
+        values.put("Availability", "Available");
+
+        OperationStaff opStaff = Appfactory.createOperstionStaff(values);
+        operationStaffCrudService.persist(opStaff);
+    }
 }

@@ -28,14 +28,17 @@ public class Staff implements Serializable {
     private String certification;
     private String langauges;
     @OneToMany(orphanRemoval= true,cascade=CascadeType.ALL)
+    @JoinColumn(name="staff_number")
     private List<AdministrativeStaff> admin = new ArrayList<AdministrativeStaff>();
     @OneToMany
+    @JoinColumn(name="staff_number")
     private List<TechnicalStaff> techStaff = new ArrayList<TechnicalStaff>();
     
     public List<AdministrativeStaff> getAdmin() {
         return admin;
     }
     @OneToMany(orphanRemoval= true,cascade=CascadeType.ALL)
+    @JoinColumn(name="staff_number")
     private List<OperationStaff> opStaff;
 
     public List<OperationStaff> getOpStaff() {
