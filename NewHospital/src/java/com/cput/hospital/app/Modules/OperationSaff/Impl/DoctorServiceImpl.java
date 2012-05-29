@@ -7,9 +7,7 @@ package com.cput.hospital.app.Modules.OperationSaff.Impl;
 import com.cput.hospital.app.Modules.OperationSaff.DoctorService;
 import com.cput.hospital.model.Doctor;
 import com.cput.hospital.model.OperationStaff;
-import com.cput.hospital.model.Staff;
-import com.cput.hospital.model.Surgeon;
-import com.cput.hospital.services.StaffCrudService;
+import com.cput.hospital.services.OperationStaffCrudService;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,42 +23,48 @@ import org.springframework.transaction.annotation.Transactional;
 public class DoctorServiceImpl implements DoctorService {
 
     @Autowired
-    StaffCrudService staffCrudService;
+    OperationStaffCrudService operationStaffCrudService;
 
     @Override
-    public String CheckAvailability(String status, Long id) {
-
-        Staff staff = staffCrudService.findById(id);
-        List<OperationStaff> opStaff = staff.getOpStaff();
+    public List<Doctor> CheckAvailability(String status) {
 
         List<Doctor> doctor = new ArrayList<Doctor>();
+        List<OperationStaff> opStaff = new ArrayList<OperationStaff>();
+        opStaff= operationStaffCrudService.findAll();
 
-        for (Doctor doc : doctor) {
+        for (OperationStaff operationS : opStaff) {
 
-            if (status.equals(doc)) {
-                return "The doctor is vailable for appointments";
-            } else {
-                return "The doctor is not available for appointments";
+            List<Doctor> docs = operationS.getDoctor();
+
+            for (Doctor doc : docs) {
+
+                if (status.equalsIgnoreCase("Available")) {
+                    doctor.add(doc);
+                }
             }
         }
-        return status;
+        return doctor;
     }
 
     @Override
-    public Doctor findSpeciality(String speciality, Long id) {
+    public List<Doctor> findSpeciality(String speciality) {
 
-        Staff staff = staffCrudService.findById(id);
-        List<OperationStaff> opStaff = staff.getOpStaff();
-        Doctor doctor = new Doctor();
-        List<Surgeon> surgeon = doctor.getSurgeon();
-        for (Surgeon surg : surgeon) {
+        List<Doctor> doctor = new ArrayList<Doctor>();
 
-            if (speciality.equals(surg.getSpeciality())) {
+        List< OperationStaff> opStaff = new ArrayList<OperationStaff>();
+        
+        opStaff= operationStaffCrudService.findAll();
+        for (OperationStaff operationS : opStaff) {
 
-                System.out.println("The doctor specialises with" + surg.getSpeciality());
+            List<Doctor> docs = operationS.getDoctor();
+            for (Doctor doc : docs) {
+
+                if (speciality.equals(doc.getSpeciality())) {
+
+                    doctor = (List<Doctor>) doc;
+                }
             }
         }
-
         return doctor;
     }
 }
