@@ -170,11 +170,16 @@ public class Appfactory {
 
         OperationStaff opStaff = new OperationStaff();
         Doctor doc = new Doctor();
+        Nurse nurse = new Nurse();
         doc.setSpeciality(values.get("Speciality"));
         doc.setAvailability(values.get("Availability"));
         
+        nurse.setJobDesc(values.get("Job description"));
+        nurse.setNurseStatus(values.get("On duty"));
+      
         opStaff.getDoctor().add(doc);
-
+        opStaff.getNurse();
+        
         return opStaff;
 
     }

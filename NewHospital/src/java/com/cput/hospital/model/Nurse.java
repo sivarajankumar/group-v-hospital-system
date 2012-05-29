@@ -22,7 +22,17 @@ public class Nurse implements Serializable {
     private Long id;
     
     private String jobDesc;
+    private String nurseStatus;
 
+    public String getNurseStatus() {
+        return nurseStatus;
+    }
+
+    public void setNurseStatus(String nurseStatus) {
+        this.nurseStatus = nurseStatus;
+    }
+    
+    
     public String getJobDesc() {
         return jobDesc;
     }

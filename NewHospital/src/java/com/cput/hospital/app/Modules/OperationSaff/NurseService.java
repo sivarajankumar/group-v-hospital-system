@@ -4,16 +4,16 @@
  */
 package com.cput.hospital.app.Modules.OperationSaff;
 
-import com.cput.hospital.model.Doctor;
+import com.cput.hospital.model.Nurse;
 import java.util.List;
 
 /**
  *
  * @author Leo
  */
-public interface DoctorService {
-
-    public List<Doctor> findSpeciality(String speciality);
-
-    public  List<Doctor> CheckAvailability(String status);
+public interface NurseService {
+    
+    public List<Nurse> nurseRank(String rank);
+     public List<Nurse> findNurseOnStatus(String nurseStatus);
+    
 }
