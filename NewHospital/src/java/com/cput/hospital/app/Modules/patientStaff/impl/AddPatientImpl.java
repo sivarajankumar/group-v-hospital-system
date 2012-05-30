@@ -38,16 +38,6 @@ public class AddPatientImpl implements AddPatientService {
         return patient;
     }
 
-    /*
-     * @Override public Person addPerson(String title, Name name, Contact
-     * contact, Address addres, Demographic demographic) { Person person = new
-     * Person(); person.setTitle(title); person.setAddress(addres);
-     * person.setContact(contact); person.setDemographic(demographic);
-     * person.setName(name);
-     *
-     * return person;
-    }
-     */
     @Override
     public Person findByName(String name) {
         Person person = new Person();

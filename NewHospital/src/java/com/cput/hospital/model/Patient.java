@@ -29,20 +29,22 @@ public class Patient implements Serializable {
  @Temporal(javax.persistence.TemporalType.DATE)
     private Date accepted;
    
-    @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
-    @JoinColumn(name="patient_id")
+    @OneToMany
+    @JoinColumn(name="persorn_id")
     private List<Person> person = new ArrayList<Person>();
     
    @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
-    @JoinColumn(name="patient_id")
+    @JoinColumn(name="appointment_id")
     private List<Appointment> appointment = new ArrayList<Appointment>();
     
       @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
-    @JoinColumn(name="patient_id")
+    @JoinColumn(name="history_id")
     private List<History> history = new ArrayList<History>();
 
-    @ManyToOne
-    private Ward ward;
+      @ManyToOne
+      @JoinColumn(name ="ward_id")
+      private Ward ward;
+      
     @ManyToOne
     private OperationStaff operationStaff;
     

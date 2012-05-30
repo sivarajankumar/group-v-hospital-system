@@ -24,6 +24,9 @@ public class Ward implements Serializable {
     private String  wardStatus;
     private String gender;
 
+    @OneToMany
+    private List<Patient> patients;
+
     public List<Patient> getPatients() {
         return patients;
     }
@@ -32,9 +35,7 @@ public class Ward implements Serializable {
         this.patients = patients;
     }
     
-    @OneToMany(orphanRemoval=true,cascade= CascadeType.ALL)
-    @JoinColumn(name="patient_id")
-    private List<Patient> patients = new ArrayList<Patient>();
+    
     public String getGender() {
         return gender;
     }

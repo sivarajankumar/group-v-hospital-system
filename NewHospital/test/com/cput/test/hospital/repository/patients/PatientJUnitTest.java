@@ -4,12 +4,15 @@
  */
 package com.cput.test.hospital.repository.patients;
 
+import com.cput.hospital.app.Modules.hospitalModules.Service.WardService;
 import com.cput.hospital.app.factory.Appfactory;
 import com.cput.hospital.model.Patient;
 import com.cput.hospital.model.Person;
+import com.cput.hospital.model.Ward;
 import com.cput.hospital.services.PatientCrudService;
 import com.cput.hospital.services.PersonCrudService;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.junit.*;
 import org.springframework.context.ApplicationContext;
@@ -53,7 +56,7 @@ public class PatientJUnitTest {
          
      Map<String,String> values = new HashMap<String,String>();
      values.put("title", "Mr");
-     values.put("firstname", "Qiqa");
+     values.put("firstname", "mzuyanda");
      values.put("lastname", "Kotyi");
      values.put("gender", "male");
      values.put("race","white");
@@ -93,32 +96,43 @@ public class PatientJUnitTest {
    
     
        Patient patient = Appfactory.creatPatient(patienvalues,person);
-    
-         patientCrudService.persist(patient);
-         patientID = patient.getId();
-         Assert.assertNotNull(patient.getId());
-    Patient patient1 = patientCrudService.findById(patientID);
- 
-     Assert.assertEquals("654123", patient1.getIdNumber());
-     //update
-       Patient patient2 = patientCrudService.findById(patientID);
-     patient2.setIdNumber("2010145");
-      patientCrudService.merge(patient2);
+        
+         WardService wardservice = (WardService)ctx.getBean("wardServiceImpl");
+                  
+               
+         List<Ward> wads = wardservice.findAllWards();
+         for(Ward w :wads)
+         {
+             if((w.getGender().equalsIgnoreCase("males"))&& w.getWardStatus().equalsIgnoreCase("empty"))
+             {
+              patient.setWard(w); 
+                
+             }
+             
+         }
          
-        Patient patient3 = patientCrudService.findById(patientID);
-          Assert.assertEquals("2010145", patient3.getIdNumber());
-          //delete
-        /* Patient person4 = personCrudService.findById(personId);
-      personCrudService.remove(person4);
-        Person person5 = personCrudService.findById(personId);
-         Assert.assertNull(person5);*/
-    
+          patientCrudService.persist(patient);
+             patientID = patient.getId();
+             Assert.assertNotNull(patient.getId());
+             
+             //read
+        Patient patient1 = patientCrudService.findById(patientID);
 
-         
-         
-         /* patientCrudService.removeById(new Long(50));
-         Patient patient18 = patientCrudService.findById(new Long(50));
-         Assert.assertNull(patient18);*/
+         Assert.assertEquals("654123", patient1.getIdNumber());
+         //update
+           Patient patient2 = patientCrudService.findById(patientID);
+           patient2.setIdNumber("2010145");
+           patientCrudService.merge(patient2);
+             
+            Patient patient3 = patientCrudService.findById(patientID);
+            Assert.assertEquals("2010145", patient3.getIdNumber());
+          
+          //delete
+         Patient patient4 = patientCrudService.findById(patientID);
+      patientCrudService.remove(patient4);
+        Patient patient5 = patientCrudService.findById(patientID);
+         Assert.assertNull(patient5);
+    
          
     }
 }
